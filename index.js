@@ -16,6 +16,10 @@ app.post('/register', register);
 app.post('/form/submit', submitForm);
 app.get('/formdata', getFormData);
 
+app.get('/', (req, res) => {
+  res.send('App is running');
+});
+
 const startSever = () =>
   app.listen(port, () => {
     console.log(`server is running on port ${port}`);
